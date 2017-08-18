@@ -18,32 +18,34 @@ export default class CustomChart extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      chartData: {
-        labels: [' '],
-        datasets: [{
-          label: 'Reportable loss',
-          backgroundColor: 'rgba(255,99,132,0.2)',
-          borderColor: 'rgba(255,99,132,1)',
-          borderWidth: 1,
-          hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-          hoverBorderColor: 'rgba(255,99,132,1)',
-          data: [props.inputData.a.value]
-        }]
-      }
-    };
-    //let {inputData: {a: a}, inputData: {b: b}, inputData: {c: c}} = props;
+    this.calcChart = this.calcChart.bind(this);
+  }
 
-//console.log('--->', chartData.datasets[0].data[0]);
-    //chartData.datasets[0].data[0] = a.value - b.value + c.value;
+  calcChart(inputData) {
+    if (!inputData) return;
 
-    //chartData.datasets[0].data[0] = props.inputData.a.value;
+    let values = [];
+    let {inputData: {a: a}, inputData: {b: b}, inputData: {c: c}} = inputData;
+    let calcRecult = a.value - b.value + c.value;
+
+    values.push(calcRecult);
+    return {
+      labels: [' '],
+      datasets: [{
+        label: 'Reportable loss',
+        backgroundColor: 'rgba(255,99,132,0.2)',
+        borderColor: 'rgba(255,99,132,1)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+        hoverBorderColor: 'rgba(255,99,132,1)',
+        data: values
+      }]
+    }
   }
 
   render() {
-
     return (
-      <Bar id="customBarChart" data={this.state.chartData} options={chartOptions} redraw/>
+      <Bar id="customBarChart" data={this.calcChart(this.props)} options={chartOptions} redraw/>
     );
   }
 }

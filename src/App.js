@@ -4,6 +4,7 @@ import './App.css';
 
 import NumericInput from 'react-numeric-input';
 import CustomChart from './ChartComponent';
+import $http from "./AJAX";
 
 let dataFromServer = {
   variables: {
@@ -27,7 +28,21 @@ let dataFromServer = {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+
+    //check ability to use calculator on this website
+/*    let url = 'https://acrm.okcalculator.com/getCalculator/df1b246e5e99802fc72e39ef9ca2a487';
+    $http.ajaxGet(url)
+      .then(JSON.parse)
+      .then((r) => {
+        //this.doSomethingWithJSON(r)
+        console.log('r--->', r);
+      } )
+      .catch(function(error) {
+        //throw new Error(error);
+        console.log('error--->', error);
+      });*/
+
+  this.state = {
       inputData: dataFromServer.variables,
       formula: dataFromServer.formula,
       result: this.calcResults(dataFromServer)
