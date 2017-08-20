@@ -80,13 +80,13 @@ class App extends Component {
         </div>
         <div className="container">
           <div className="box-alignment md text-center">
-            <div className="calculator-area mb10">
+            <div className="calculator-area mb10 disabled">
               <div className="calculator-header">
                 <h1 className="h1">
                   Test a new calculator
                 </h1>
               </div>
-              <div className="calculator-body disabled">
+              <div className="calculator-body">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="inputs-area">
