@@ -28,7 +28,6 @@
 }
 
 .calculator-area.disabled{
-  background: #000;
   position: relative;
 }
 
@@ -40,7 +39,7 @@
   width:100%;
   left: 0;
   top: 0;
-  opacity:0.02;
+  opacity:0.7;
   z-index:2;
 }
 
