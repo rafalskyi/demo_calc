@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Bar} from 'react-chartjs-2';
+import './ChartComponent.css';
 
 let chartOptions = {
   scales: {
@@ -43,7 +44,27 @@ export default class CustomChart extends Component {
   render() {
 
     return (
-      <Bar id="customBarChart" data={this.state.chartData} options={chartOptions} redraw/>
+      <div className="tab-area">
+        <ul className="tab-list">
+          <li className="active">
+            <a href="#">
+              Breakeven Analysis
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Breakeven Analysis
+            </a>
+          </li>
+        </ul>
+        <div className="tab-content">
+          <div className="tab">
+            <div className="chart-area">
+              <Bar id="customBarChart" data={this.state.chartData} options={chartOptions} redraw/>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
