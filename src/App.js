@@ -98,7 +98,7 @@ class App extends Component {
             <div className="calculator-area mb10 disabled">
               <div className="calculator-header">
                 <h1 className="h1">
-                  Test a new calculator
+                  React calculator
                 </h1>
               </div>
               <div className="calculator-body">
