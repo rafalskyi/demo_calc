@@ -90,9 +90,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="app-header text-center">
-          <h2>Welcome to OKCalculator</h2>
-        </div>
         <div className="container">
           <div className="box-alignment md text-center">
             <div className="calculator-area mb10 disabled">
