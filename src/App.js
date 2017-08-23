@@ -92,7 +92,7 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <div className="box-alignment md text-center">
-            <div className="calculator-area mb10 disabled">
+            <div className="calculator-area mb10">
               <div className="calculator-header">
                 <h1 className="h1">
                   Test a new calculator

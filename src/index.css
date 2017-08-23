@@ -160,4 +160,10 @@ a{
   .form-group.row{
     display: block;
   }
+  .row{
+    display: block;
+  }
+  .react-numeric-input input{
+    height:40px;
+  }
 }
